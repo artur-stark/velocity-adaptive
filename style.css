@@ -165,7 +165,7 @@ p{
 
 .description {
 	font-size: 17px;
-	line-height: 1.2px;
+	line-height: 1.2;
 	letter-spacing: 3px;
 	text-transform: uppercase;
 
@@ -184,7 +184,7 @@ p{
 .aboutus .card{
 	padding: 35px 15px 25px;
 
-	width: 300px;
+	max-width: 300px;
 
 	border: 1px solid #DCEBF7;
 	border-radius: 5px;
@@ -210,7 +210,6 @@ p{
 }
 
 .aboutus .card p{
-	font-size: 14px;
 
 	color: #6A859C;
 }
@@ -311,7 +310,7 @@ p{
 
 .footer__desc h4 {
 	font-size: 18px;
-	line-height: 1.1px;
+	line-height: 1.1;
 	letter-spacing: 4px;
 	text-transform: uppercase;
 
@@ -325,10 +324,13 @@ p{
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	flex-wrap: wrap;
+	gap:20px 40px;
 }
 
 .footer__desc-container > *{
 	width: 30%;
+	min-width: 220px;
 }
 
 .footer__desc a{
@@ -382,6 +384,49 @@ p{
 	text-align: center;
 }
 
+@media (max-width:829px){
+	.footer__desc-container{
+		justify-content: space-evenly;
+	}
+	.footer__desc h4{
+		margin-bottom: 15px;
+	}
+	.footer__desc {
+		padding-top: 0;
+	}
+}
+
+@media (max-width:660px){
+	.tabs__nav button{
+		display: block;
+		margin: 0 auto;
+		padding: 10px 30px;
+	}
+	.tabs__nav button + button{
+		margin-left:auto;
+		margin-top: 10px;
+	}
+	.tabs__nav{
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width:600px){
+	.services .cards-wrapper{
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+	}
+	.services .card {
+		width: 80%;
+	}
+	.title-wrapper{
+		margin-bottom: 40px;
+	}
+
+}
+
+
 @media (max-width: 400px) {
 	.header__nav li + li {
 		margin-left: 15px;
@@ -392,9 +437,26 @@ p{
 	}
 	.welcome__links a{
 		display: block;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.welcome__links * + *{
-		margin: 0;
 		margin-top: 20px;
+	}
+	body {
+		font-size: 12px;
+	}
+	.aboutus .card h4{
+		font-size: 16px;
+	}
+	.services .card h4{
+		font-size: 16px;
+	}
+	.services .card .link{
+		font-size: 14px;
+	}
+	.tabs__item h4{
+		font-size: 24px;
 	}
 }
