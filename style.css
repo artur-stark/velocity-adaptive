@@ -19,8 +19,8 @@ p{
 
 .header {
 	padding: 20px 0;
-
 	position: fixed;
+
 	top:0;
 	left: 0;
 	z-index: 100;
@@ -62,11 +62,12 @@ p{
 }
 
 .main {
-
+	
 }
 
 .welcome {
 	min-height: 600px;
+	height: 100vh;
 	padding: 195px 0;
 
 	display: flex;
@@ -175,7 +176,9 @@ p{
 
 .aboutus .cards-wrapper{
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 20px;
 }
 
 .aboutus .card{
@@ -297,7 +300,7 @@ p{
 	margin-bottom: 14px;
 }
 
-.tabs__item p{
+.tabs__desc {
 	width: 720px;
 	display: inline-block;
 }
